@@ -1,3 +1,9 @@
+snippet cf "Const function" b
+const $1 = ($2) => {
+	$0
+};
+endsnippet
+
 snippet rc "React Class"
 import React, { Component } from 'react';
 
@@ -27,11 +33,10 @@ process.env.$1
 endsnippet
 
 snippet de "Default Exports" b
-const $1 = () => {
-	$2
+const $1 = ($2) => {
+	$3
 };
 $0
-
 export default $1;
 endsnippet
 
