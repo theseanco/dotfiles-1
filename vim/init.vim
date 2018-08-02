@@ -29,6 +29,7 @@ Plug 'godlygeek/tabular'
 Plug 'airblade/vim-gitgutter'
 Plug 'reedes/vim-pencil'
 Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-vinegar'
 Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-fugitive' " Awesome git wrapper
 Plug 'tpope/vim-surround'
@@ -40,16 +41,24 @@ Plug 'joshdick/onedark.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'digitaltoad/vim-pug' "Syntax highlighting for Pug
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'gcmt/taboo.vim'
+Plug 'ervandew/supertab'
 call plug#end()
 "%}
-
 
 let g:vim_markdown_folding_disabled = 1
 let mapleader = ","
 
 filetype plugin indent on    " required
 runtime macros/matchit.vim
+
+" SUPERTAB {%
+autocmd FileType javascript let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+let g:SuperTabClosePreviewOnPopupClose = 1
+" %}
 
 syntax enable
 
@@ -66,8 +75,25 @@ set background=dark
 set t_8b=^[[48;2;%lu;%lu;%lum
 set t_8f=^[[38;2;%lu;%lu;%lum
 
-" #DEOPLETE {%
-let g:deoplete#enable_at_startup = 1
+" #DEOPLETE (AND FRIENDS) {%
+if has('nvim')
+  " Enable deoplete on startup
+  let g:deoplete#enable_at_startup = 1
+endif
+let g:deoplete#omni#functions = {}
+let g:deoplete#omni#functions.javascript = [
+  \ 'tern#Complete',
+  \ 'jspc#omni'
+\]
+set completeopt=longest,menuone,preview
+let g:deoplete#sources = {}
+let g:deoplete#sources['javascript.jsx'] = ['file', 'ultisnips', 'ternjs']
+" %}
+
+" #TERN {%
+let g:tern#command = ['tern']
+let g:tern#arguments = ['--persistent']
+autocmd FileType javascript nnoremap <silent> <buffer> gb :TernDef<CR>
 " %}
 
 " #CTRLP SETTINGS {%
@@ -211,7 +237,7 @@ set path+=**
 set wildmenu
 
 " Ignore node_modules and images from search results and from CtrlP
-set wildignore+=**/node_modules/**,**_site/**,*.swp,*.png,*.jpg,*.gif,*.webp,*.jpeg,*.map
+set wildignore+=**/node_modules/**,**/dist/**,**_site/**,*.swp,*.png,*.jpg,*.gif,*.webp,*.jpeg,*.map
 
 " Use the system register for all cut yank and paste operations
 set clipboard=unnamedplus
