@@ -1,0 +1,48 @@
+let mapleader = ","
+
+"" Disable F1 bringing up the help doc every time
+inoremap <F1> <ESC>
+nnoremap <F1> <ESC>
+vnoremap <F1> <ESC>
+
+"" A saner way to save files.<F2> is easy to press
+nnoremap <F2> :w<CR>
+
+inoremap <S-Tab> <C-d>
+
+" #MOVING LINES
+" Normal mode
+nnoremap <C-j> :m .+1<CR>==
+nnoremap <C-k> :m .-2<CR>==
+
+" Visual mode
+vnoremap <C-j> :m '>+1<CR>gv=gv
+vnoremap <C-k> :m '<-2<CR>gv=gv
+
+" # QuickFix List
+nnoremap <leader>co :cw<CR>
+nnoremap <leader>cc :ccl<CR>
+nnoremap <UP> :cope<CR>
+nnoremap <DOWN> :cclose<CR>
+nnoremap <LEFT> :cprev<CR>
+nnoremap <RIGHT> :cnext<CR>
+nnoremap <silent> <leader>cn :cnext<CR>
+nnoremap <silent> <leader>cp :cprev<CR>
+
+" Shortcut to open init.vim
+nnoremap <leader>ev :vsp $MYVIMRC<CR>
+
+" Save state of open Windows and Buffers
+nnoremap <leader>s :mksession<CR>
+
+" Delete buffer completely without messing up window layout
+nnoremap <leader>q :Bwipeout<CR>
+
+" turn off search highlights
+nnoremap <leader><space> :nohlsearch<CR>
+
+" Reload Vim config
+nnoremap <Leader>r :so ~/.config/nvim/init.vim<CR>
+
+"Create file under cursor
+:map <leader>gf :e <cfile><cr>

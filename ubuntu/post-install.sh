@@ -93,13 +93,6 @@ else
   echo "Installing Node"
   nvm install node
 
-  # Install Rust
-  echo "Installing Rust"
-  sudo -u $SUDO_USER curl https://sh.rustup.rs -sSf | sh
-
-  # Install Exa (ls replacement)
-  cargo install --no-default-features --git https://github.com/ogham/exa
-
   # Install Ubuntu Restricted Extras (Requires clicks)
   echo "Installing Ubuntu Restricted Extras"
   apt install -y ubuntu-restricted-extras

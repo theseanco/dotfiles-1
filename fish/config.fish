@@ -73,26 +73,70 @@ function jekyll
   bundle exec jekyll $argv
 end
 
+
+# Git aliases
+
 function ga
   git add $argv
 end
 
-function gc
-  git commit $argv
+function gA
+  git add -A $argv
+end
+
+function gcma
+  git commit --amend
+end
+
+function gnope
+  git checkout . $argv
+end
+
+function unstage
+  git unstage HEAD $argv
 end
 
 function gcm
-  git commit -m $argv
+  git commit $argv
 end
 
 function gs
   git status $argv
 end
 
-function gbd
-  git branch -d $argv
+function gbh
+  git branch $argv
 end
 
-# Fix for `npm` global commands not working in fish
-# https://github.com/fish-shell/fish-shell/issues/3023
-set PATH /home/ayo/.nvm/versions/node/v10.4.1/bin $PATH
+function gch
+  git checkout $argv
+end
+
+# Other
+
+# Force tmux to start in utf8 https://github.com/wernight/powerline-web-fonts/issues/8
+set -gx LANG "en_US.UTF-8"
+set -gx LC_CTYPE "en_US.UTF-8"
+
+function tm
+  tmux -u $argv
+end
+
+function c
+  cargo $argv
+end
+
+function pw
+ upower -i /org/freedesktop/UPower/devices/battery_BAT0 $argv
+end
+
+# Flush DNS Cache
+function flush-dns
+  sudo /etc/init.d/networking force-reload
+end
+
+set -gx EDITOR "vim"
+set -gx FZF_DEFAULT_COMMAND  "rg --files --no-ignore --hidden --follow --glob '!.git/*'"
+
+set -gx GEM_HOME "$HOME/.gems"
+set -gx GEM_PATH "$HOME/.gems/bin:$PATH"

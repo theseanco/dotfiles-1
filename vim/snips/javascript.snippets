@@ -1,7 +1,15 @@
 snippet cf "Const function" b
 const $1 = ($2) => {
-	$0
+	$3
 };
+$0
+endsnippet
+
+snippet f "Regular function" b
+function $1($2) {
+	$3
+}
+$0
 endsnippet
 
 snippet rc "React Class"
@@ -15,14 +23,16 @@ class $1 extends Component {
 	}
 }
 
-export default $1
+export default $1;
 endsnippet
 
 snippet rf "React function"
 import React from 'react';
 
-const $1 = () => {
-
+const $1 = ($2) => {
+	return (
+		$0
+	);
 };
 
 export default $1;
@@ -48,6 +58,10 @@ snippet clg "console.log"
 console.log($1);$0
 endsnippet
 
+snippet cle "console.error"
+console.error($1);$0
+endsnippet
+
 snippet thenCatch "adds then and catch declaration to a promise"
 .then($1 => {
 	$2
@@ -67,4 +81,28 @@ endsnippet
 
 snippet anfn "Create anonymous function"
 ($1) => {$2};$0
+endsnippet
+
+snippet me "Module Exports"
+module.exports = $0
+endsnippet
+
+snippet df "Default function exports"
+function $1($2) {
+	$0
+}
+
+export default $1;
+endsnippet
+
+snippet dimp "Default import"
+import $1 from '$2$1';$0
+endsnippet
+
+snippet rq "Node require"
+const $1 = require('$2');$0
+endsnippet
+
+snippet drq "Default Node require"
+const $1 = require('$1');$0
 endsnippet
