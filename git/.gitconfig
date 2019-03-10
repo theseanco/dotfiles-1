@@ -1,5 +1,7 @@
 [core]
-	editor = nvim
+  editor = nvim
+  excludesfile = ~/.gitignore_global
+
 [user]
-	name = Ayo Isaiah
-	email = ayisaiah@gmail.com
+  name = Ayo Isaiah
+  email = ayisaiah@gmail.com
