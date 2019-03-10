@@ -10,43 +10,23 @@ else
 
   # Install essentials from Ubuntu Repos
   echo "Installing packages from Ubuntu Repos"
- apt install -y git fish gimp shutter inkscape firefox chromium-browser vim mpv tlp htop wmctrl youtube-dl hexchat
+ apt install -y git fish gimp inkscape firefox chromium-browser vim mpv tlp htop
+ wmctrl youtube-dl powertop tilix neofetch
 
   # Start TLP
   echo "Starting TLP"
   tlp start
 
   # Add PPAs
-
   echo "Adding Albert PPA"
-  add-apt-repository -y ppa:nilarimogard/webupd8
-
-  echo "Adding Tilix PPA"
-  add-apt-repository -y ppa:webupd8team/terminix
-
-  echo "Adding Elementary Tweaks PPA"
-  add-apt-repository -y ppa:philip.scott/elementary-tweaks
-
-  echo "Adding KDEConnect Indicator PPA"
-  add-apt-repository -y ppa:webupd8team/indicator-kdeconnect
-
-  echo "Adding Nitroshare PPA"
-  apt-add-repository -y ppa:george-edison55/nitroshare
-
-  echo "Adding Ghostwriter PPA"
-  add-apt-repository -y ppa:wereturtle/ppa
+  curl https://build.opensuse.org/projects/home:manuelschneid3r/public_key | sudo apt-key add -
+  sh -c "echo 'deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_18.10/ /' > /etc/apt/sources.list.d/home:manuelschneid3r.list"
 
   echo "Adding Jumpapp PPA"
   add-apt-repository -y ppa:mkropat/ppa
 
-  echo "Adding Simple Screen Recorder PPA"
-  add-apt-repository -y ppa:maarten-baert/simplescreenrecorder
-
   echo "Adding Lollypop PPA"
   add-apt-repository -y ppa:gnumdk/lollypop
-
-  echo "Adding Neofetch PPA"
-  add-apt-repository -y ppa:dawidd0811/neofetch
 
   # Update and install from PPAs
 
@@ -54,18 +34,7 @@ else
   apt update
 
   echo "Installing from PPAs"
-  apt install -y albert tilix elementary-tweaks kdeconnect indicator-kdeconnect ghostwriter nitroshare jumpapp simplescreenrecorder lollypop neofetch
-
-  # Install custom icon sets
-
-  # Install Papirus Icons from Github
-  echo "Installing Papirus Icons"
-  sudo -u $SUDO_USER wget -qO- https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/install-papirus-home.sh | sh
-
-  # Install elementaryPlus Icons from Github
-  echo "Installing elementaryPlus icons"
-  sudo -u $SUDO_USER git clone https://github.com/mank319/elementaryPlus
-  sudo -u $SUDO_USER mv elementaryPlus ~/.icons/
+  apt install -y albert jumpapp lollypop
 
   # Install Powerline fonts from Github
   echo "Installing powerline fonts"
@@ -74,11 +43,6 @@ else
   sudo -u $SUDO_USER ./install.sh
   cd ..
   sudo -u $SUDO_USER rm -rf fonts/
-
-  # Install elementary dropbox from Github
-  echo "Installing elementary-dropbox from Github"
-  sudo -u $SUDO_USER git clone https://github.com/zant95/elementary-dropbox /tmp/elementary-dropbox
-  sudo -u $SUDO_USER bash /tmp/elementary-dropbox/install.sh -y
 
   # Install Ruby and Jekyll
   echo "Installing Ruby"
