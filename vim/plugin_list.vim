@@ -1,4 +1,4 @@
-" #PLUGINS {%
+" #PLUGINS {{{
 call plug#begin('~/.local/share/nvim/plugged')
 
 " Linting and Code Formatting
@@ -8,9 +8,11 @@ Plug 'w0rp/ale'
 Plug 'reedes/vim-pencil'
 Plug 'nelstrom/vim-markdown-folding'
 
+" Go
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
 " Git
 Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
 
 " Fuzzy Search
 Plug '~/.fzf'
@@ -18,6 +20,7 @@ Plug 'junegunn/fzf.vim'
 
 " Syntax Highlighting And Indentation For 100+ Languages
 Plug 'sheerun/vim-polyglot'
+Plug 'Quramy/vim-js-pretty-template'
 
 " Appearance and Themes
 Plug 'morhetz/gruvbox'
@@ -42,5 +45,8 @@ Plug 'godlygeek/tabular'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
 Plug 'tpope/vim-obsession'
+Plug 'gcmt/taboo.vim'
+Plug 'luochen1990/rainbow'
+Plug 'ludovicchabant/vim-gutentags'
 call plug#end()
-"%}
+"}}}

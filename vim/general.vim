@@ -18,7 +18,7 @@ endif
 set t_8b=^[[48;2;%lu;%lu;%lum
 set t_8f=^[[38;2;%lu;%lu;%lum
 
-" #TEMPLATES {%
+" #TEMPLATES {{{
 " Prefill new files created by vim with contents from the following templates
 augroup templates
   autocmd BufNewFile *.html 0r ~/.config/nvim/templates/skeleton.html
@@ -29,7 +29,7 @@ augroup templates
   autocmd BufNewFile LICENSE 0r ~/.config/nvim/templates/skeleton.LICENCE
   autocmd BufNewFile .gitignore 0r ~/.config/nvim/templates/skeleton.gitignore
 augroup END
-"%}
+"}}}
 
 " Stop concealing quotes in JSON
 let g:vim_json_syntax_conceal = 0
@@ -51,12 +51,12 @@ set splitright
 " Show leader key
 set showcmd
 
-" #TABS AND SPACES {%
+" #TABS AND SPACES {{{
 set expandtab " On pressing tab, insert 2 spaces
 set tabstop=2 " show existing tab with 2 spaces width
 set softtabstop=2
 set shiftwidth=2 " when indenting with '>', use 2 spaces width
-"%}
+"}}}
 
 set number " Show line numbers
 set noswapfile " No swap file
@@ -119,3 +119,6 @@ autocmd BufWritePre * %s/\s\+$//e
 autocmd CompleteDone * pclose
 
 au BufRead,BufNewFile,BufReadPost *.json set syntax=json
+
+" Rainbow.vim
+ let g:rainbow_active = 1

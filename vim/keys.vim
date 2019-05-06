@@ -62,3 +62,4 @@ noremap <leader>0 :tablast<cr>
 
 nnoremap <C-Left> :tabprevious<CR>
 nnoremap <C-Right> :tabnext<CR>
+nnoremap <C-t> :tabnew<CR>
