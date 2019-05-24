@@ -13,6 +13,8 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " Git
 Plug 'tpope/vim-fugitive'
+Plug 'mhinz/vim-signify'
+Plug 'rhysd/git-messenger.vim'
 
 " Fuzzy Search
 Plug '~/.fzf'
@@ -20,7 +22,6 @@ Plug 'junegunn/fzf.vim'
 
 " Syntax Highlighting And Indentation For 100+ Languages
 Plug 'sheerun/vim-polyglot'
-Plug 'Quramy/vim-js-pretty-template'
 
 " Appearance and Themes
 Plug 'morhetz/gruvbox'

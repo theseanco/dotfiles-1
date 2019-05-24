@@ -4,6 +4,7 @@ let g:gruvbox_sign_column = 'bg0'
 let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_italic = 1
 let g:gruvbox_invert_selection = 0
+let g:gruvbox_plugin_hi_groups = 1
 colorscheme gruvbox
 " }}}
 
@@ -76,7 +77,7 @@ augroup END
 let g:ale_fixers = {}
 let g:ale_fixers['javascript'] = ['eslint']
 let g:ale_fixers['json'] = ['prettier']
-let g:ale_fixers['scss'] = ['stylelint', 'prettier']
+let g:ale_fixers['scss'] = ['stylelint']
 let g:ale_fixers['rust'] = ['rustfmt']
 let g:ale_fix_on_save = 1 " Fix files automatically on save
 let g:ale_pattern_options = {
@@ -118,7 +119,7 @@ nnoremap <Leader>T :FzfTags<CR>
 nnoremap <C-p> :FzfFiles<CR>
 " Have FZF list all tracked files plus untracked files minus your ignored files
 nnoremap <Leader>p :FzfGitFiles --exclude-standard --others --cached<CR>
-nnoremap <Leader>g :FzfRg<CR>
+nnoremap <Leader>gt :FzfRg<CR>
 " }}}
 
 " #RIPGREP {{{
@@ -132,13 +133,6 @@ endif
 " Highlight the line of the cursor
 let g:conoline_auto_enable = 1
 let g:conoline_use_colorscheme_default_insert=1
-" }}}
-
-" #VIM PRETTY TEMPLATE {{{
-call jspretmpl#register_tag('html', 'javascript')
-
-autocmd FileType javascript JsPreTmpl
-autocmd FileType javascript.jsx JsPreTmpl
 " }}}
 
 " #VIM GO {{{
@@ -167,4 +161,17 @@ au BufNewFile,BufRead *.go setlocal noet ts=4 sw=4 sts=4
 
 " #GUTENTAGS {{{
 let g:gutentags_file_list_command = "rg --files --follow --ignore-file '/home/ayo/.vimignore'"
+" }}}
+
+" #SIGNIFY {{{
+" Check for only Git
+let g:signify_vcs_list = [ 'git' ]
+
+" Jump to next and previous hunks
+nmap <leader>gj <plug>(signify-next-hunk)
+nmap <leader>gk <plug>(signify-prev-hunk)
+
+" Hunk text object
+omap ic <plug>(signify-motion-inner-pending)
+xmap ic <plug>(signify-motion-inner-visual)
 " }}}
