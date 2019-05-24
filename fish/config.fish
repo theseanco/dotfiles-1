@@ -61,6 +61,10 @@ function vim
   nvim $argv
 end
 
+function vi
+  /usr/bin/vim $argv
+end
+
 function gcd
   cd (git rev-parse --show-toplevel)
 end
@@ -112,6 +116,10 @@ function gch
   git checkout $argv
 end
 
+function nvim
+  ~/Downloads/./nvim.appimage $argv
+end
+
 # Other
 
 # Force tmux to start in utf8 https://github.com/wernight/powerline-web-fonts/issues/8
@@ -136,7 +144,18 @@ function flush-dns
 end
 
 set -gx EDITOR "vim"
-set -gx FZF_DEFAULT_COMMAND  "rg --files --no-ignore --hidden --follow --glob '!.git/*'"
+set -gx FZF_DEFAULT_COMMAND "rg --files --hidden --follow --ignore-file '/home/ayo/.vimignore'"
 
 set -gx GEM_HOME "$HOME/.gems"
 set -gx GEM_PATH "$HOME/.gems/bin:$PATH"
+
+set -gx PATH $PATH "/home/ayo/.yarn/bin"
+set -gx PATH $PATH "/usr/local/go/bin"
+
+set -gx ANDROID_HOME "$HOME/Android/Sdk"
+set -gx PATH $PATH "$ANDROID_HOME/emulator"
+set -gx PATH $PATH "$ANDROID_HOME/tools"
+set -gx PATH $PATH "$ANDROID_HOME/tools/bin"
+set -gx PATH $PATH "$ANDROID_HOME/platform-tools"
+
+set -gx JAVA_HOME "/usr/lib/jvm/java-8-openjdk-amd64"
