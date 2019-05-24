@@ -28,6 +28,7 @@ augroup templates
   autocmd BufNewFile LICENCE 0r ~/.config/nvim/templates/skeleton.LICENCE
   autocmd BufNewFile LICENSE 0r ~/.config/nvim/templates/skeleton.LICENCE
   autocmd BufNewFile .gitignore 0r ~/.config/nvim/templates/skeleton.gitignore
+  autocmd BufNewFile .stylelintrc.json 0r ~/.config/nvim/templates/skeleton.stylelintrc
 augroup END
 "}}}
 
