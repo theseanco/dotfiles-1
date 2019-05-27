@@ -175,3 +175,9 @@ nmap <leader>gk <plug>(signify-prev-hunk)
 omap ic <plug>(signify-motion-inner-pending)
 xmap ic <plug>(signify-motion-inner-visual)
 " }}}
+
+" #FUGITIVE {{{
+nmap <leader>gw :Gwrite<CR>
+nmap <leader>gc :Gcommit<CR>
+nmap <leader>gs :Gstatus<CR>
+" }}}
