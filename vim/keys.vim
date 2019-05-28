@@ -60,6 +60,6 @@ noremap <leader>8 8gt
 noremap <leader>9 9gt
 noremap <leader>0 :tablast<cr>
 
-nnoremap <S-Tab> :tabprevious<CR>
-nnoremap <Tab> :tabnext<CR>
+nnoremap <C-left> :tabprevious<CR>
+nnoremap <C-right> :tabnext<CR>
 nnoremap <C-t> :tabnew<CR>
