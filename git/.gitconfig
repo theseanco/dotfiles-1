@@ -19,3 +19,4 @@
 	brD = branch -D
   po = push origin
   pom = push origin master
+  unstage = reset HEAD
