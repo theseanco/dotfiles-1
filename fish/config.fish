@@ -9,8 +9,6 @@ source $OMF_PATH/init.fish
 # Aliases
 source $HOME/.config/fish/aliases.fish
 
-# Other
-
 # Force tmux to start in utf8 https://github.com/wernight/powerline-web-fonts/issues/8
 set -gx LANG "en_US.UTF-8"
 set -gx LC_CTYPE "en_US.UTF-8"
