@@ -5,3 +5,17 @@
 [user]
   name = Ayo Isaiah
   email = ayisaiah@gmail.com
+
+[alias]
+  s = status
+  ch = checkout
+  ci = commit
+  cm = commit -m
+  a = add
+  aa = add -A
+  amend = commit --amend
+  br = branch
+  brd = branch -d
+	brD = branch -D
+  po = push origin
+  pom = push origin master
