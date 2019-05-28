@@ -166,6 +166,7 @@ let g:gutentags_file_list_command = "rg --files --follow --ignore-file '/home/ay
 " #SIGNIFY {{{
 " Check for only Git
 let g:signify_vcs_list = [ 'git' ]
+let g:signify_realtime = 1
 
 " Jump to next and previous hunks
 nmap <leader>gj <plug>(signify-next-hunk)
