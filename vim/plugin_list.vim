@@ -24,7 +24,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'sheerun/vim-polyglot'
 
 " Appearance and Themes
-Plug 'morhetz/gruvbox'
+Plug 'gruvbox-community/gruvbox'
 Plug 'itchyny/lightline.vim'
 
 " Autocompletion & Intellisense
