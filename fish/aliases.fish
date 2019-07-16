@@ -77,3 +77,7 @@ end
 function y
   yarn --ignore-engines $argv
 end
+
+function go
+  /usr/local/go/bin/go $argv
+end
