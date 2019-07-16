@@ -148,6 +148,9 @@ let g:go_highlight_types = 1
 " Automatically import packages on save
 let g:go_fmt_command = "goimports"
 
+" Prevent errors from opening the location list
+let g:go_fmt_fail_silently = 1
+
 " Search and easily navigate between the function and type definitions within
 " the package
 au FileType go nmap <leader>d :GoDeclsDir<cr>
