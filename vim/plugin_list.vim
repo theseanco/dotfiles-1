@@ -49,5 +49,6 @@ Plug 'tpope/vim-obsession'
 Plug 'gcmt/taboo.vim'
 Plug 'luochen1990/rainbow'
 Plug 'ludovicchabant/vim-gutentags'
+Plug 'TaDaa/vimade'
 call plug#end()
 "}}}
