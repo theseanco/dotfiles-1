@@ -23,10 +23,6 @@ vnoremap <C-k> :m '<-2<CR>gv=gv
 " QuickFix List
 nnoremap <leader>co :cw<CR>
 nnoremap <leader>cc :ccl<CR>
-nnoremap <UP> :cope<CR>
-nnoremap <DOWN> :cclose<CR>
-nnoremap <LEFT> :cprev<CR>
-nnoremap <RIGHT> :cnext<CR>
 nnoremap <silent> <leader>cn :cnext<CR>
 nnoremap <silent> <leader>cp :cprev<CR>
 
@@ -63,3 +59,6 @@ noremap <leader>0 :tablast<cr>
 nnoremap <C-left> :tabprevious<CR>
 nnoremap <C-right> :tabnext<CR>
 nnoremap <C-t> :tabnew<CR>
+
+nnoremap n nzz
+nnoremap N Nzz
