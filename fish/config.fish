@@ -6,6 +6,11 @@ set -q XDG_DATA_HOME
 # Load Oh My Fish configuration.
 source $OMF_PATH/init.fish
 
+# Bobthefish theme configuration.
+set -g theme_nerd_fonts yes # Enable nerd font support
+set -g theme_display_date no
+set -g theme_color_scheme dark
+
 # Aliases
 source $HOME/.config/fish/aliases.fish
 
