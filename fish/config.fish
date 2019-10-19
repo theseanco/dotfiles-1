@@ -26,19 +26,13 @@ set -gx FZF_DEFAULT_COMMAND "rg --files --hidden --follow --ignore-file '/home/a
 
 set -gx PATH $PATH "$HOME/bin"
 
-set -gx GEM_HOME "$HOME/.gems"
-set -gx PATH $PATH "$HOME/.gems/bin"
+# Unset
+# set -gx GEM_HOME "$HOME/.rvm/bin:$PATH"
+# set -gx GEM_HOME "$HOME/.gems"
+# set -gx PATH $PATH "$HOME/.gems/bin"
 
 set -gx PATH $PATH "/home/ayo/.yarn/bin"
-set -gx PATH $PATH "/home/ayo/.nvm/versions/node/v12.6.0/bin/node"
-
-set -gx ANDROID_HOME "$HOME/Android/Sdk"
-set -gx PATH $PATH "$ANDROID_HOME/emulator"
-set -gx PATH $PATH "$ANDROID_HOME/tools"
-set -gx PATH $PATH "$ANDROID_HOME/tools/bin"
-set -gx PATH $PATH "$ANDROID_HOME/platform-tools"
-
-set -gx JAVA_HOME "/usr/lib/jvm/java-8-openjdk-amd64"
+# set -gx PATH $PATH "/home/ayo/.nvm/versions/node/v12.12.0/bin/node"
 
 # Golang
 set -gx PATH $PATH "/usr/local/go/bin"
@@ -47,7 +41,3 @@ set -gx GOBIN "$HOME/go/bin"
 set -gx GOPATH "$HOME/go"
 set -gx GOROOT "/usr/local/go"
 set -Ux GO111MODULE "on"
-
-# Rust
-set -gx PATH $PATH "$HOME/.cargo/bin"
-set -gx PATH $PATH "$HOME/.cargo/env"

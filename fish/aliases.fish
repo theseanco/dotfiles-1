@@ -38,7 +38,7 @@ function mkcd
 end
 
 function vim
-  nvim $argv
+  ~/Downloads/./nvim.appimage $argv
 end
 
 function vi

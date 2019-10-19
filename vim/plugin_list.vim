@@ -1,9 +1,6 @@
 " #PLUGINS {{{
 call plug#begin('~/.local/share/nvim/plugged')
 
-" Linting and Code Formatting
-Plug 'w0rp/ale'
-
 " Markdown
 Plug 'reedes/vim-pencil'
 Plug 'nelstrom/vim-markdown-folding'
@@ -24,11 +21,11 @@ Plug 'junegunn/fzf.vim'
 Plug 'sheerun/vim-polyglot'
 
 " Appearance and Themes
-Plug 'gruvbox-community/gruvbox'
+Plug 'sainnhe/gruvbox-material'
 Plug 'itchyny/lightline.vim'
 
 " Autocompletion & Intellisense
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
 Plug 'SirVer/ultisnips'
 
 " Utilities
@@ -50,5 +47,7 @@ Plug 'gcmt/taboo.vim'
 Plug 'luochen1990/rainbow'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'TaDaa/vimade'
+Plug 'ap/vim-css-color'
+Plug 'editorconfig/editorconfig-vim'
 call plug#end()
 "}}}

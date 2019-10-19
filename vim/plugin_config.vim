@@ -1,11 +1,9 @@
-" #GRUVBOX {{{
+" #GRUVBOX Material {{{
+set termguicolors
 set background=dark
-let g:gruvbox_sign_column = 'bg0'
-let g:gruvbox_contrast_dark = 'hard'
-let g:gruvbox_italic = 1
-let g:gruvbox_invert_selection = 0
-let g:gruvbox_plugin_hi_groups = 1
-colorscheme gruvbox
+let g:gruvbox_material_background = 'hard'
+let g:gruvbox_material_enable_bold = 1
+colorscheme gruvbox-material
 " }}}
 
 " #SUPERTAB {{{
@@ -15,18 +13,18 @@ inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<C-x><C-o>"
 " }}}
 
 " #Lightline {{{
-" Integrate Coc with Lightline
 function! CocCurrentFunction()
     return get(b:, 'coc_current_function', '')
 endfunction
 
 let g:lightline = {
-      \ 'colorscheme': 'gruvbox',
+      \ 'colorscheme': 'gruvbox_material',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'cocstatus', 'currentfunction', 'readonly', 'filename', 'modified' ] ]
+      \             [ 'cocstatus', 'currentfunction', 'gitbranch', 'readonly', 'filename', 'modified'] ]
       \ },
       \ 'component_function': {
+      \   'gitbranch': 'fugitive#head',
       \   'cocstatus': 'coc#status',
       \   'currentfunction': 'CocCurrentFunction'
       \ },
@@ -51,48 +49,31 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+nmap <silent> ]c <Plug>(coc-diagnostic-next)
+nmap <silent> [c <Plug>(coc-diagnostic-prev)
 
-nnoremap <silent> <Leader>K :call <SID>show_documentation()<CR>
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
+nnoremap <silent> <Leader>k :call <SID>show_documentation()<CR>
 function! s:show_documentation()
-  if &filetype == 'vim'
+  if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
   else
     call CocAction('doHover')
   endif
 endfunction
-" }}}
+"}}}
 
 " #MARKDOWN {{{
 let g:pencil#textwidth = 80
 let g:vim_markdown_folding_disabled = 1
 au BufNewFile,BufRead,BufWrite *.md syntax match Comment /\%^---\_.\{-}---$/
+autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_gb
 let g:markdown_fenced_languages = ['rust', 'css', 'yaml', 'javascript', 'html', 'vim','json']
 augroup pencil
   autocmd!
-  autocmd FileType markdown,mkd,md call pencil#init({'wrap': 'soft'})
+  autocmd FileType md call pencil#init()
 augroup END
-"}}}
-
-" #ALE {{{
-let g:ale_fixers = {}
-let g:ale_fixers['javascript'] = ['eslint']
-let g:ale_fixers['json'] = ['prettier']
-let g:ale_fixers['scss'] = ['stylelint']
-let g:ale_fixers['rust'] = ['rustfmt']
-let g:ale_fix_on_save = 1 " Fix files automatically on save
-let g:ale_pattern_options = {
-\ '\.min\.js$': {'ale_linters': [], 'ale_fixers': []},
-\ '\.min\.css$': {'ale_linters': [], 'ale_fixers': []},
-\}
-
-let g:ale_sign_error = '❌'
-let g:ale_sign_warning = '⚠️'
-
-" Move between linting errors
-nmap <silent> [c <Plug>(ale_previous_wrap)
-nmap <silent> ]c <Plug>(ale_next_wrap)
-
-nmap <F6> <Plug>(ale_fix)
 "}}}
 
 " #ULTILSNIPS {{{
@@ -151,15 +132,27 @@ let g:go_fmt_command = "goimports"
 " Prevent errors from opening the location list
 let g:go_fmt_fail_silently = 1
 
+" Automatically get signature/type info for object under cursor
+let g:go_auto_type_info = 1
+
+" Open local documentation
+let g:go_doc_url = 'http://localhost:6060'
+
 " Search and easily navigate between the function and type definitions within
 " the package
 au FileType go nmap <leader>d :GoDeclsDir<cr>
 
+" Use snakecase for JSON tags
+let g:go_addtags_transform = "snakecase"
+
 " Go to definition
 au FileType go nmap <F5> <Plug>(go-def)
 
-" Go Fmt
-au BufNewFile,BufRead *.go setlocal noet ts=4 sw=4 sts=4
+" Show the relevent Godoc for the word under the cursor in the browser
+au FileType go nmap <F12> <Plug>(go-doc-browser)
+
+" Prevent prefilling new files
+let g:go_template_autocreate = 0
 " }}}
 
 " #GUTENTAGS {{{
@@ -183,4 +176,9 @@ xmap ic <plug>(signify-motion-inner-visual)
 nmap <leader>gw :Gwrite<CR>
 nmap <leader>gc :Gcommit<CR>
 nmap <leader>gs :Gstatus<CR>
+" }}}
+
+" #EDITORCONFIG {{{
+" Ensure plugin works well wil Fugitive
+let g:EditorConfig_exclude_patterns = ['fugitive://.\*']
 " }}}

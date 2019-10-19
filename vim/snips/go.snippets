@@ -1,11 +1,11 @@
-snippet fhttp "Http handler" b
+snippet fh "Handler Func" b
 func $1 (w http.ResponseWriter, r *http.Request) $2 {
 	$3
 }
 $0
 endsnippet
 
-snippet iferr "Generic error handling" b
+snippet ife "Generic error handling" b
 if err != nil {
 	$1
 }
@@ -26,12 +26,26 @@ if err != nil {
 $0
 endsnippet
 
-snippet pl "fmt.Println" b
+snippet fl "fmt.Println" b
 fmt.Println($1)
 $0
 endsnippet
 
-snippet pf "fmt.Printf" b
+snippet ff "fmt.Printf" b
 fmt.Printf("$1", $2)
+$0
+endsnippet
+
+snippet ts "New struct type" b
+type $1 struct {
+	$2
+}
+$0
+endsnippet
+
+snippet ti "New interface type" b
+type $1 interface {
+	$2
+}
 $0
 endsnippet

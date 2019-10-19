@@ -110,6 +110,11 @@ set smartcase
 " Jump to match when searching
 set incsearch
 
+set updatetime=300
+
+" Enable word completion
+set complete+=kspell
+
 hi NonText guifg=#4a4a59
 hi SpecialKey guifg=white guibg=#cc0000
 

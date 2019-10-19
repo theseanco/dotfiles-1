@@ -3,12 +3,13 @@
   excludesfile = ~/.gitignore_global
 
 [user]
-  name = Ayo Isaiah
+  name = Ayooluwa Isaiah
   email = ayisaiah@gmail.com
-
+  signingkey = 1815F1956543A746
 [alias]
   s = status
   ch = checkout
+  cb = checkout -b
   ci = commit
   cm = commit -m
   a = add
