@@ -21,12 +21,13 @@ Plug 'junegunn/fzf.vim'
 Plug 'sheerun/vim-polyglot'
 
 " Appearance and Themes
-Plug 'sainnhe/gruvbox-material'
+Plug 'morhetz/gruvbox'
 Plug 'itchyny/lightline.vim'
 
-" Autocompletion & Intellisense
+" Autocompletion, Linting & Intellisense
 Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
 Plug 'SirVer/ultisnips'
+Plug 'dense-analysis/ale'
 
 " Utilities
 Plug 'airblade/vim-rooter'
@@ -43,11 +44,13 @@ Plug 'godlygeek/tabular'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
 Plug 'tpope/vim-obsession'
-Plug 'gcmt/taboo.vim'
 Plug 'luochen1990/rainbow'
 Plug 'ludovicchabant/vim-gutentags'
-Plug 'TaDaa/vimade'
 Plug 'ap/vim-css-color'
-Plug 'editorconfig/editorconfig-vim'
+Plug 'psliwka/vim-smoothie'
+Plug 'ryanoasis/vim-devicons'
+Plug 'easymotion/vim-easymotion'
+Plug 'TaDaa/vimade'
+Plug 'voldikss/vim-floaterm'
 call plug#end()
 "}}}

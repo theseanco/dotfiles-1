@@ -1,3 +1,4 @@
+# GIT
 abbr g 'git'
 abbr ga 'git add'
 abbr gb 'git branch'
@@ -21,3 +22,13 @@ abbr gr 'git remote'
 abbr grb 'git rebase'
 abbr gs 'git status'
 abbr gst 'git stash'
+
+# Arch Linux package manager
+abbr psy 'sudo pacman -Sy'
+abbr ps 'sudo pacman -S'
+abbr psu 'sudo pacman -Syu'
+abbr pr 'sudo pacman -R'
+abbr pq 'sudo pacman -Qu' # List available system updates
+
+# Show power consumption, battery health and related statistics
+abbr b3 'upower -i /org/freedesktop/UPower/devices/battery_BAT0'

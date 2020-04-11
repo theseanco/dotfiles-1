@@ -1,11 +1,3 @@
-# Path to Oh My Fish install.
-set -q XDG_DATA_HOME
-  and set -gx OMF_PATH "$XDG_DATA_HOME/omf"
-  or set -gx OMF_PATH "$HOME/.local/share/omf"
-
-# Load Oh My Fish configuration.
-source $OMF_PATH/init.fish
-
 # Bobthefish theme configuration.
 set -g theme_nerd_fonts yes # Enable nerd font support
 set -g theme_display_date no
@@ -26,18 +18,22 @@ set -gx FZF_DEFAULT_COMMAND "rg --files --hidden --follow --ignore-file '/home/a
 
 set -gx PATH $PATH "$HOME/bin"
 
-# Unset
-# set -gx GEM_HOME "$HOME/.rvm/bin:$PATH"
-# set -gx GEM_HOME "$HOME/.gems"
-# set -gx PATH $PATH "$HOME/.gems/bin"
+set -gx GEM_HOME "$HOME/.rvm/bin:$PATH"
+set -gx GEM_HOME "$HOME/.gems"
+set -gx PATH $PATH "$HOME/.gems/bin"
 
 set -gx PATH $PATH "/home/ayo/.yarn/bin"
-# set -gx PATH $PATH "/home/ayo/.nvm/versions/node/v12.12.0/bin/node"
 
 # Golang
 set -gx PATH $PATH "/usr/local/go/bin"
 set -gx PATH $PATH "$HOME/go/bin"
 set -gx GOBIN "$HOME/go/bin"
 set -gx GOPATH "$HOME/go"
-set -gx GOROOT "/usr/local/go"
+set -gx GOROOT "/usr/lib/go"
 set -Ux GO111MODULE "on"
+
+# Snap
+set -gx PATH $PATH "/var/lib/snapd/snap/bin"
+
+# Rust
+set -gx PATH $PATH "/home/ayo/.cargo/bin"

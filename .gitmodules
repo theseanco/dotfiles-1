@@ -1,3 +1,0 @@
-[submodule "ubuntu"]
-	path = ubuntu
-	url = git@github.com:ayoisaiah/ubuntu-post-install.git

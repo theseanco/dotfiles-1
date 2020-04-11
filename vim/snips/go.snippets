@@ -12,6 +12,13 @@ if err != nil {
 $0
 endsnippet
 
+snippet ifee "Error handing" b
+if err := $1; err != nil {
+	$2
+}
+$0
+endsnippet
+
 snippet imp "Multiline import" b
 import (
 	"$1"

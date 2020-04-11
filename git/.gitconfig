@@ -5,7 +5,7 @@
 [user]
   name = Ayooluwa Isaiah
   email = ayisaiah@gmail.com
-  signingkey = 1815F1956543A746
+  signingkey = 08CF071B5764D484
 [alias]
   s = status
   ch = checkout
@@ -23,5 +23,3 @@
   unstage = reset HEAD
 [commit]
 	gpgsign = true
-[init]
-	templatedir = ~/.git-templates

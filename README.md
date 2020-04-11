@@ -1,4 +1,3 @@
 # Dotfiles
 
-Experimental, ongoing configuration files and scripts for Ubuntu, fish, git and vim.
-
+Experimental, ongoing configuration files and scripts for Arch Linux, fish, git and vim.
