@@ -1,63 +1,27 @@
-function ymp3
-  youtube-dl --extract-audio --audio-format mp3 $argv
-end
+alias ymp3="youtube-dl --extract-audio --audio-format mp3"
+alias vim="~/bin/./nvim.appimage"
 
-# Create a directory and change to it immediately
-function mkcd
-  mkdir $argv
-  cd $argv
-end
-
-function vim
-  ~/bin/./nvim.appimage $argv
-end
-
-function vi
-  /usr/bin/vim $argv
-end
-
-function nvim
-  ~/bin/./nvim.appimage $argv
-end
+alias vi="/usr/bin/vim"
+alias nvim="~/bin/./nvim.appimage"
 
 # Return to the project root (where .git folder is)
-function gcd
-  cd (git rev-parse --show-toplevel)
-end
+alias gcd="cd (git rev-parse --show-toplevel)"
 
-function jekyll
-  bundle exec jekyll $argv
-end
+alias jekyll="bundle exec jekyll"
 
 # start tmux in UTF-8 mode
-function tm
-  tmux -u $argv
-end
+alias tm="tmux -u"
 
  # Flush DNS Cache
-function flush-dns
-  sudo /etc/init.d/networking force-reload
-end
+alias flush-dns="sudo /etc/init.d/networking force-reload"
 
-# Node
-function n
-  npm $argv
-end
+alias n="npm"
+alias y="yarn --ignore-engines"
 
-function y
-  yarn --ignore-engines $argv
-end
-
-function go
-  /usr/bin/go $argv
-end
+alias go="/usr/bin/go"
 
 # Replace ls with lsd
-function ls
-  lsd $argv
-end
+alias ls="lsd"
 
 # Replace cat with bat
-function cat
-  bat $argv
-end
+alias cat="bat"
