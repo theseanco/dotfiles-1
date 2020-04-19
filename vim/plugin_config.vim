@@ -102,7 +102,7 @@ let g:UltiSnipsExpandTrigger="<c-s>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsSnippetsDir="~/.config/nvim/snips"
-let g:UltiSnipsSnippetDirectories=["UtilSnips", "snips"]
+let g:UltiSnipsSnippetDirectories=["snips"]
 "}}}
 
 " #NETRW {{{
