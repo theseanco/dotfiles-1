@@ -2,7 +2,7 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 " Go
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go' }
 
 " Git
 Plug 'tpope/vim-fugitive'

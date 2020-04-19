@@ -4,13 +4,6 @@
   "diagnostic.hintSign": "⚠️",
   "diagnostic.infoSign": "⚠️",
   "diagnostic.enable": true,
-  "languageserver": {
-    "golang": {
-      "command": "gopls",
-      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
-      "filetypes": ["go"]
-    }
-  },
   "coc.preferences.formatOnSaveFiletypes": [
     "Markdown",
     "javascript",
@@ -24,5 +17,7 @@
   "prettier.eslintIntegration": true,
   "prettier.stylelintIntegration": false,
   "prettier.disableSuccessMessage": true,
-  "suggest.removeDuplicateItems": true
+  "suggest.removeDuplicateItems": true,
+  "go.enable": true,
+  "go.goplsPath": "~/go/bin/gopls"
 }
