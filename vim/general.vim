@@ -14,7 +14,6 @@ if (has("termguicolors"))
   set termguicolors
 endif
 
-
 set t_8b=^[[48;2;%lu;%lu;%lum
 set t_8f=^[[38;2;%lu;%lu;%lum
 
@@ -128,5 +127,9 @@ autocmd CompleteDone * pclose
 
 au BufRead,BufNewFile,BufReadPost *.json set syntax=json
 
-" Rainbow.vim
- let g:rainbow_active = 1
+" #RIPGREP {{{
+if executable("rg")
+    set grepprg=rg\ --vimgrep\ --no-heading
+    set grepformat=%f:%l:%c:%m,%f:%l:%m
+endif
+" }}}

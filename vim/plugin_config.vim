@@ -1,4 +1,4 @@
-" #GRUVBOX Material {{{
+" #GRUVBOX {{{
 set termguicolors
 set background=dark
 let g:gruvbox_italic = 1
@@ -11,7 +11,7 @@ let g:SuperTabClosePreviewOnPopupClose = 1
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<C-x><C-o>"
 " }}}
 
-" #Lightline {{{
+" #LIGHTLINE {{{
 function! CocCurrentFunction()
     return get(b:, 'coc_current_function', '')
 endfunction
@@ -105,13 +105,6 @@ let g:UltiSnipsSnippetsDir="~/.config/nvim/snips"
 let g:UltiSnipsSnippetDirectories=["snips"]
 "}}}
 
-" #NETRW {{{
-" Set preferred view
-let g:netrw_liststyle = 3
-" Remove banner
-let g:netrw_banner = 0
-" }}}
-
 " #FZF {{{
 let g:fzf_command_prefix = 'Fzf'
 nnoremap <Leader>b :FzfBuffers<CR>
@@ -183,20 +176,6 @@ function! CreateCenteredFloatingWindow()
 endfunction
 " }}}
 
-" #RIPGREP {{{
-if executable("rg")
-    set grepprg=rg\ --vimgrep\ --no-heading
-    set grepformat=%f:%l:%c:%m,%f:%l:%m
-endif
-" }}}
-
-" #CONOLINE {{{
-" Highlight the line of the cursor
-let g:conoline_auto_enable = 1
-let g:conoline_use_colorscheme_default_insert=1
-let g:conoline_use_colorscheme_default_normal=1
-" }}}
-
 " #VIM GO {{{
 let g:go_highlight_build_constraints = 1
 let g:go_highlight_extra_types = 1
@@ -265,12 +244,11 @@ nmap <leader>gc :Gcommit<CR>
 nmap <leader>gs :Gstatus<CR>
 " }}}
 
-" VIM-FLOATERM {{{
-let g:floaterm_background = "#282828"
-let g:floaterm_position = "center"
-let g:floaterm_border_bgcolor = "#282828"
-let g:floaterm_keymap_new    = "<F7>"
-let g:floaterm_keymap_prev   = "<F8>"
-let g:floaterm_keymap_next   = "<F9>"
-let g:floaterm_keymap_toggle = "<F10>"
+" RAINBOW {{{
+let g:rainbow_active = 1
+" }}}
+
+" VIM-BBYE {{{
+" Delete buffer completely without messing up window layout
+nnoremap <leader>q :Bwipeout<CR>
 " }}}

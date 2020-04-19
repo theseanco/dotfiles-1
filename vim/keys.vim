@@ -32,9 +32,6 @@ nnoremap <leader>ev :vsp $MYVIMRC<CR>
 " Save state of open Windows and Buffers
 nnoremap <leader>s :mksession<CR>
 
-" Delete buffer completely without messing up window layout
-nnoremap <leader>q :Bwipeout<CR>
-
 " turn off search highlights
 nnoremap <leader><space> :nohlsearch<CR>
 

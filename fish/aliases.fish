@@ -1,8 +1,7 @@
 alias ymp3="youtube-dl --extract-audio --audio-format mp3"
-alias vim="~/bin/./nvim.appimage"
+alias vim="/usr/bin/nvim"
 
 alias vi="/usr/bin/vim"
-alias nvim="~/bin/./nvim.appimage"
 
 # Return to the project root (where .git folder is)
 alias gcd="cd (git rev-parse --show-toplevel)"
