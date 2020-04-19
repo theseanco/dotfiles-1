@@ -5,23 +5,6 @@ let g:gruvbox_italic = 1
 colorscheme gruvbox
 " }}}
 
-" #ALE {{{
-let g:ale_sign_error = '❌'
-let g:ale_sign_warning = '⚠️'
-
-let g:ale_fixers = {}
-let g:ale_fixers['css'] = ['stylelint']
-let g:ale_fixers['scss'] = ['prettier']
-let g:ale_fix_on_save = 1 " Fix files automatically on save
-let g:ale_linters_explicit = 1
-
-" Move between linting errors
-nmap <silent> [b <Plug>(ale_previous_wrap)
-nmap <silent> ]b <Plug>(ale_next_wrap)
-
-nmap <F6> <Plug>(ale_fix)
-" }}}
-
 " #SUPERTAB {{{
 let g:SuperTabDefaultCompletionType = '<c-n>'
 let g:SuperTabClosePreviewOnPopupClose = 1

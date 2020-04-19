@@ -23,7 +23,6 @@ Plug 'itchyny/lightline.vim'
 " Autocompletion, Linting & Intellisense
 Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
 Plug 'SirVer/ultisnips'
-Plug 'dense-analysis/ale'
 
 " Utilities
 Plug 'airblade/vim-rooter'
