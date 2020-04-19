@@ -1,10 +1,6 @@
 " #PLUGINS {{{
 call plug#begin('~/.local/share/nvim/plugged')
 
-" Markdown
-Plug 'reedes/vim-pencil'
-Plug 'nelstrom/vim-markdown-folding'
-
 " Go
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 

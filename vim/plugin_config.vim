@@ -114,18 +114,6 @@ function! s:show_documentation()
 endfunction
 "}}}
 
-" #MARKDOWN {{{
-let g:pencil#textwidth = 80
-let g:vim_markdown_folding_disabled = 1
-au BufNewFile,BufRead,BufWrite *.md syntax match Comment /\%^---\_.\{-}---$/
-autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_gb
-let g:markdown_fenced_languages = ['rust', 'css', 'yaml', 'javascript', 'html', 'vim','json']
-augroup pencil
-  autocmd!
-  autocmd FileType md call pencil#init()
-augroup END
-"}}}
-
 " #ULTILSNIPS {{{
 let g:UltiSnipsExpandTrigger="<c-s>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
