@@ -26,6 +26,7 @@ Plug 'SirVer/ultisnips'
 " Utilities
 Plug 'airblade/vim-rooter'
 Plug 'moll/vim-bbye'
+Plug 'jiangmiao/auto-pairs'
 Plug 'mattn/emmet-vim'
 Plug 'ervandew/supertab'
 Plug 'tpope/vim-surround'
