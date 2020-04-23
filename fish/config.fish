@@ -21,6 +21,7 @@ set -gx PATH $PATH "$HOME/bin"
 set -gx GEM_HOME "$HOME/.rvm/bin:$PATH"
 set -gx GEM_HOME "$HOME/.gems"
 set -gx PATH $PATH "$HOME/.gems/bin"
+set -gx PATH $PATH "/home/ayo/.gem/ruby/2.7.0/bin"
 
 set -gx PATH $PATH "/home/ayo/.yarn/bin"
 
