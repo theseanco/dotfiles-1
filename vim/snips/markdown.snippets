@@ -29,6 +29,15 @@ tutorial: $7
 $0
 endsnippet
 
+snippet fig "Figure" b
+{% include figure.html
+	src="$1"
+	alt="$2"
+	caption="$3"
+%}
+$0
+endsnippet
+
 snippet img "Image" b
 {% include image.html
 	name="$1"
@@ -59,4 +68,11 @@ endsnippet
 
 snippet i "Italics"
 __$1__$0
+endsnippet
+
+snippet cbb "Code block with filename" b
+<figure class="code-block">
+	<figcaption class="file-desc"></figcaption>
+$1
+</figure>$0
 endsnippet
