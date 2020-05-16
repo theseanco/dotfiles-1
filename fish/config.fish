@@ -38,3 +38,7 @@ set -gx PATH $PATH "/var/lib/snapd/snap/bin"
 
 # Rust
 set -gx PATH $PATH "/home/ayo/.cargo/bin"
+
+# Deno
+set -gx DENO_INSTALL "/home/ayo/.deno"
+set -gx PATH $PATH "$DENO_INSTALL/bin:$PATH"
