@@ -1,29 +1,25 @@
 snippet fh "Handler Func" b
 func $1 (w http.ResponseWriter, r *http.Request) $2 {
 	$3
-}
-$0
+}$0
 endsnippet
 
 snippet ife "Generic error handling" b
 if err != nil {
 	$1
-}
-$0
+}$0
 endsnippet
 
 snippet ifee "Error handing" b
 if err := $1; err != nil {
 	$2
-}
-$0
+}$0
 endsnippet
 
 snippet imp "Multiline import" b
 import (
 	"$1"
-)
-$0
+)$0
 endsnippet
 
 snippet errl "Error with log.Fatal()" b
@@ -34,25 +30,21 @@ $0
 endsnippet
 
 snippet fl "fmt.Println" b
-fmt.Println($1)
-$0
+fmt.Println($1)$0
 endsnippet
 
 snippet ff "fmt.Printf" b
-fmt.Printf("$1", $2)
-$0
+fmt.Printf("$1", $2)$0
 endsnippet
 
 snippet ts "New struct type" b
 type $1 struct {
 	$2
-}
-$0
+}$0
 endsnippet
 
 snippet ti "New interface type" b
 type $1 interface {
 	$2
-}
-$0
+}$0
 endsnippet
