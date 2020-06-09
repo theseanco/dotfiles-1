@@ -216,6 +216,9 @@ let g:go_doc_url = 'http://localhost:6060'
 " the package
 au FileType go nmap <leader>d :GoDeclsDir<cr>
 
+" Easily add struct tags
+au FileType go nmap <leader>gat :GoAddTags<cr>
+
 " Use snakecase for JSON tags
 let g:go_addtags_transform = "snakecase"
 
