@@ -25,6 +25,7 @@ abbr gst 'git stash'
 
 # Arch Linux package manager
 abbr psy 'sudo pacman -Sy'
+abbr psyy 'sudo pacman -Syy'
 abbr ps 'sudo pacman -S'
 abbr psu 'sudo pacman -Syu'
 abbr pr 'sudo pacman -R'
