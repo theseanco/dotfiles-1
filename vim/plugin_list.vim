@@ -37,5 +37,6 @@ Plug 'luochen1990/rainbow'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'psliwka/vim-smoothie'
 Plug 'ryanoasis/vim-devicons'
+Plug 'wakatime/vim-wakatime'
 call plug#end()
 "}}}
