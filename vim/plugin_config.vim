@@ -269,3 +269,24 @@ let g:rainbow_active = 1
 " Delete buffer completely without messing up window layout
 nnoremap <leader>q :Bwipeout<CR>
 " }}}
+
+" VIM-PANDOC-SYNTAX {{{
+augroup pandoc_syntax
+  au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
+augroup END
+" }}}
+
+" VIM-MARKDOWN {{{
+" disable header folding
+let g:vim_markdown_folding_disabled = 1
+
+" do not use conceal feature, provided by vim-pandoc-syntax
+let g:vim_markdown_conceal = 0
+
+" disable math tex conceal feature
+let g:tex_conceal = ""
+let g:vim_markdown_math = 1
+
+" support front matter
+let g:vim_markdown_frontmatter = 1  " for YAML format
+" }}}
