@@ -247,6 +247,12 @@ nmap <leader>gk <plug>(signify-prev-hunk)
 " Hunk text object
 omap ic <plug>(signify-motion-inner-pending)
 xmap ic <plug>(signify-motion-inner-visual)
+
+" Change default symbols
+let g:signify_sign_add               = '⏩'
+let g:signify_sign_delete            = '🔴'
+let g:signify_sign_delete_first_line = '⛔'
+let g:signify_sign_change            = '🔄'
 " }}}
 
 " #FUGITIVE {{{
