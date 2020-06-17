@@ -290,3 +290,14 @@ let g:vim_markdown_math = 1
 " support front matter
 let g:vim_markdown_frontmatter = 1  " for YAML format
 " }}}
+
+" VIM-QF {{{
+" Jump to and from location/quickfix windows.
+nmap <leader>l <Plug>(qf_qf_switch)
+
+" Toggle the quickfix list window
+nmap <F5> <Plug>(qf_qf_toggle)
+
+" Toggle the location list window
+nmap <F6> <Plug>(qf_loc_toggle)
+" }}}

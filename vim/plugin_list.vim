@@ -28,6 +28,7 @@ Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
 Plug 'SirVer/ultisnips'
 
 " Utilities
+Plug 'romainl/vim-qf'
 Plug 'airblade/vim-rooter'
 Plug 'moll/vim-bbye'
 Plug 'jiangmiao/auto-pairs'
