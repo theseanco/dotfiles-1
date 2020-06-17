@@ -20,12 +20,6 @@ nnoremap <C-k> :m .-2<CR>==
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
 
-" QuickFix List
-nnoremap <leader>co :cw<CR>
-nnoremap <leader>cc :ccl<CR>
-nnoremap <silent> <leader>cn :cnext<CR>
-nnoremap <silent> <leader>cp :cprev<CR>
-
 " Shortcut to open init.vim
 nnoremap <leader>ev :vsp $MYVIMRC<CR>
 
