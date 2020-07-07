@@ -1,8 +1,7 @@
 snippet cb "Insert Code Block" b
-{% highlight $1 %}
+{{< highlight $1 >}}
 $2
-{% endhighlight %}
-$0
+{{< / highlight >}}$0
 endsnippet
 
 snippet lnk "Markdown Link"
@@ -16,11 +15,12 @@ $1
 $0
 endsnippet
 
-snippet jfm "Jekyll Front-Matter" b
+snippet fm "Front-Matter" b
 ---
 title: $1
 excerpt: $2
-permalink: /$3/
+summary: $5
+url: /$3/
 teaser: $4
 tags: [ $6 ]
 ---
@@ -28,28 +28,19 @@ $0
 endsnippet
 
 snippet fig "Figure" b
-{% include figure.html
+{{< figure
 	src="$1"
 	alt="$2"
 	caption="$3"
-%}
-$0
-endsnippet
-
-snippet img "Image" b
-{% include image.html
-	name="$1"
-	alt="$2"
-	maxw="$3"
-%}
+>}}
 $0
 endsnippet
 
 snippet alert "Include alert" b
-{% include alert.html
+{{< alert
 title="$1"
 content="$2"
-%}
+>}}
 endsnippet
 
 snippet gif "Include Gif" b
@@ -68,9 +59,26 @@ snippet i "Italics"
 __$1__$0
 endsnippet
 
+snippet ch "Checkpoint" b
+{{< checkpoint
+name="$1"
+link="$2"
+>}}$0
+endsnippet
+
 snippet cbb "Code block with filename" b
 <figure class="code-block">
-	<figcaption class="file-desc"></figcaption>
-$1
+	<figcaption class="file-desc">$1</figcaption>
+$2
 </figure>$0
+endsnippet
+
+snippet cbs "link to run code snippet" b
+  <a class="code-link" target="_blank" rel="noreferrer" href="$1">
+    Run code snippet on the Go playground
+  </a>$0
+endsnippet
+
+snippet abt "Abbreviation with title"
+<abbr title="$1">${VISUAL}</abbr>$0
 endsnippet

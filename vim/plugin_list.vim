@@ -20,14 +20,14 @@ Plug 'junegunn/fzf.vim'
 Plug 'sheerun/vim-polyglot'
 
 " Appearance and Themes
-Plug 'morhetz/gruvbox'
-Plug 'itchyny/lightline.vim'
+Plug 'ghifarit53/tokyonight-vim'
 
 " Autocompletion, Linting & Intellisense
 Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
 Plug 'SirVer/ultisnips'
 
 " Utilities
+Plug 'TaDaa/vimade'
 Plug 'romainl/vim-qf'
 Plug 'airblade/vim-rooter'
 Plug 'moll/vim-bbye'
@@ -43,5 +43,7 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'psliwka/vim-smoothie'
 Plug 'ryanoasis/vim-devicons'
 Plug 'wakatime/vim-wakatime'
+Plug 'miyakogi/conoline.vim'
+Plug 'tmux-plugins/vim-tmux-focus-events'
 call plug#end()
 "}}}

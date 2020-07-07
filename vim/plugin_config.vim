@@ -1,8 +1,20 @@
-" #GRUVBOX {{{
+" #THEME {{{
 set termguicolors
 set background=dark
-let g:gruvbox_italic = 1
-colorscheme gruvbox
+let g:tokyonight_style = 'night' " available: night, storm
+let g:tokyonight_enable_italic = 1
+
+colorscheme tokyonight
+" }}}
+
+" #CONOLINE {{{
+let g:conoline_auto_enable = 1
+let g:conoline_use_colorscheme_default_normal=1
+" }}}
+
+" #VIMADE {{{
+au! FocusLost * VimadeFadeActive
+au! FocusGained * VimadeUnfadeActive
 " }}}
 
 " #SUPERTAB {{{
@@ -17,7 +29,7 @@ function! CocCurrentFunction()
 endfunction
 
 let g:lightline = {
-      \ 'colorscheme': 'gruvbox',
+      \ 'colorscheme': 'tokyonight',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'cocstatus', 'currentfunction', 'gitbranch', 'readonly', 'filename', 'modified'] ]
@@ -216,20 +228,30 @@ let g:go_doc_url = 'http://localhost:6060'
 " the package
 au FileType go nmap <leader>d :GoDeclsDir<cr>
 
+" Gorename
+au FileType go nmap <space>n <Plug>(go-rename)
+
+" Generate if err != nil { return ... }  and automatically infer the type of
+" return values and the numbers.
+au FileType go nmap <space>b <Plug>(go-iferr)
+
+" Gorun
+au FileType go nmap <space>r <Plug>(go-run)
+
 " Easily add struct tags
 au FileType go nmap <leader>gat :GoAddTags<cr>
 
 " Use snakecase for JSON tags
 let g:go_addtags_transform = "snakecase"
 
-" Disable go to definition
+" Disable go to definition. Handled by CoC
 let g:go_def_mapping_enabled=0
 
 " Prevent prefilling new files
 let g:go_template_autocreate = 0
 
 " Go vet
-au FileType go nmap <leader>gv <plug>(go-vet)
+au FileType go nmap <leader>gv <Plug>(go-vet)
 " }}}
 
 " #GUTENTAGS {{{
