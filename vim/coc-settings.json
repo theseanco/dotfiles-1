@@ -13,6 +13,7 @@
     "html",
     "rust"
   ],
+  "javascript.suggestionActions.enabled": false,
   "prettier.singleQuote": true,
   "prettier.eslintIntegration": true,
   "prettier.stylelintIntegration": false,

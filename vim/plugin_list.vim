@@ -45,5 +45,6 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'wakatime/vim-wakatime'
 Plug 'miyakogi/conoline.vim'
 Plug 'tmux-plugins/vim-tmux-focus-events'
+Plug 'amadeus/vim-convert-color-to'
 call plug#end()
 "}}}
