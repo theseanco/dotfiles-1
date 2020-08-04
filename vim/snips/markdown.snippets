@@ -23,8 +23,18 @@ summary: $5
 url: /$3/
 teaser: $4
 tags: [ $6 ]
----
-$0
+---$0
+endsnippet
+
+snippet img "Image" b
+{{< img
+	src="$1"
+	alt="$2"
+	caption="$3"
+	width="$4"
+	height="$5"
+	loading="$6"
+>}}$0
 endsnippet
 
 snippet fig "Figure" b
@@ -32,8 +42,7 @@ snippet fig "Figure" b
 	src="$1"
 	alt="$2"
 	caption="$3"
->}}
-$0
+>}}$0
 endsnippet
 
 snippet alert "Include alert" b
