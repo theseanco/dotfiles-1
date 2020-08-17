@@ -42,3 +42,9 @@ set -gx PATH $PATH "/home/ayo/.cargo/bin"
 # Deno
 set -gx DENO_INSTALL "/home/ayo/.deno"
 set -gx PATH $PATH "$DENO_INSTALL/bin:$PATH"
+
+# fzf.fish custom keybindings
+bind \cf '__fzf_search_current_dir'
+bind \cg '__fzf_search_git_log'
+bind \cr '__fzf_search_history'
+bind \co '__fzf_search_shell_variables'

@@ -127,6 +127,9 @@ autocmd CompleteDone * pclose
 
 au BufRead,BufNewFile,BufReadPost *.json set syntax=json
 
+" Spell checking for markdown files
+autocmd BufRead,BufNewFile *.md setlocal spell
+
 " #RIPGREP {{{
 if executable("rg")
     set grepprg=rg\ --vimgrep\ --no-heading

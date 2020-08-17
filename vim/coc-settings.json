@@ -4,6 +4,9 @@
   "diagnostic.hintSign": "💡",
   "diagnostic.infoSign": "⚠️",
   "diagnostic.enable": true,
+  "eslint.options": {
+    "configFile": "~/.eslintrc.json"
+  },
   "coc.preferences.formatOnSaveFiletypes": [
     "Markdown",
     "javascript",
